@@ -1,0 +1,74 @@
+/* body {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 100px;
+    color: pink;
+    background-color: orange;
+}
+
+.test {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#el1 {
+    border: 20px solid black;
+}
+
+#el2 {
+    border: 15px dotted blue
+}
+
+p:hover {
+    background-color: pink;
+    color: orange
+}
+
+#el1:hover {
+    background-color: black;
+} */
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1em;
+    margin: 0;
+}
+
+article {
+    background-color: #fff;
+}
+
+h1 {
+    color: hotpink;
+    font-size: 2em;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border-bottom: 10px dotted purple;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-style:italic
+}
+
+.job-title {
+    color: #999999;
+    font-weight: bold;
+}
+
+a:link, a:visited {
+    color: #fb6542;
+}
+
+a:hover {
+    text-decoration: none;
+    color: green;
+}
+
+ul {
+    background-color: #eeeeee;
+    border: 5px solid purple;
+    padding: 20px
+}
