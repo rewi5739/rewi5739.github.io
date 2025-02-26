@@ -1,0 +1,83 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: skyblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+nav{
+    height: 500vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: blue;
+}
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color:yellow;
+    transition: background-color .5s;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav a:hover {
+    background-color: darkblue;
+}
+
+
+img{
+    width:30vw;
+    /* height: 30vh; */
+    rotate: 180deg;
+    transition: 
+        width 2s;
+}
+
+img:hover {
+    width: 50vw;
+    rotate: 0deg;
+}
+
+#red-ball{
+    background-color: black;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:0vw;
+    top:50vh;
+    animation-name: ballmove;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes ballmove {
+    from {
+        left:0vw;
+        top:50vh;
+    }
+
+    25% {
+        top: 97.5vh;
+        left: 50vw;
+    }
+
+    50% {
+        top: 50vh;
+        left: 97.5vw;
+    }
+
+    75% {
+        top: 0vh;
+        left: 50vw;
+    }
+
+    to {
+        left:0vw;
+        top:50vh;
+
+    }
+}
