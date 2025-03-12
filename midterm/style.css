@@ -11,6 +11,32 @@ header {
     font-size: 5vh;
 }
 
+nav {
+    display:flex;
+    background-color: purple;
+    justify-content: space-around;
+    align-items:center;
+    height: 6vh;
+    position: sticky;
+    top: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+        color: blue;
+        text-decoration: none; /* no underline */
+}
+
+nav div{
+    padding: 2vh;
+    transition: background-color .5s;
+}
+
+nav div:hover {
+    background-color: rgb(207, 0, 207);;
+}
+
 article {
     background-color: lightblue;
     width: 80vw;
@@ -21,6 +47,7 @@ article {
     
     justify-items: center;
     column-gap: 5vw;
+    row-gap: 5vw;
 }
 
 
@@ -32,10 +59,23 @@ article h2  {
 }
 
 article div {
-    background-image: linear-gradient(rgb(167, 212, 255), rgb(163, 255, 255));
+    background-image: linear-gradient(rgba(167, 212, 255, .5), rgba(163, 255, 255, .5));
+    background-color: lightgrey;
     margin: 1vh 1vw;
     padding: 1vh 1vw;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: background-color .5s;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -10vh;
+    visibility: hidden;
+}
+
+article div:hover {
+    background-color: white;
 }
 
 article div h3 {
