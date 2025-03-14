@@ -1,5 +1,7 @@
 body {
     background-color: black;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -12,7 +14,7 @@ header {
 }
 
 article {
-    background-color: lightblue;
+    background-color: rgb(85, 85, 85);
     width: 80vw;
     margin: 1vh 8vw;
     padding: 2vh 2vw;
@@ -25,6 +27,7 @@ article {
 
 
 article h2  {
+    color: white;
     grid-column-start: 1;
     grid-column-end: span 2;
     font-size: 4vh;
@@ -44,6 +47,7 @@ article div h3 {
 
 article div h4 {
     color: rgb(173, 0, 173);
+    font-weight: normal;
 }
 
 article div p {
@@ -62,4 +66,9 @@ article div p {
         font-size: 4vh;
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
+}
+
+footer div {
+    height: 10vh;
+    background-color: purple;
 }
