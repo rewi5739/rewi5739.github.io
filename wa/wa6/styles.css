@@ -46,8 +46,13 @@ nav ul {
 
 nav a {
   color: #fff;
-  text-decoration: none;
+  /* text-decoration: none; */
   padding: .5em 1em;
+}
+
+.navel {
+  color: green;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .photos {
