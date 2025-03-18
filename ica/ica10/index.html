@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing JS</title>
+    <style>
+        body {
+            background-color: aqua;
+            transition: background-color 2s;
+        }
+
+        article {
+            display: flexbox;
+        }
+    </style>
+</head>
+<body>
+    <h1 >Hello!</h1>
+    <button>Change Color Below</button>
+    <article>
+        <p>V Click me V</p>
+        <button class="name" style="background-color: white; display:inline-block">green</button>
+        <!-- <div>blue</div>
+        <div>black</div>
+        <div>red</div>
+        <div>yellow</div>
+        <div>white</div> -->
+    </article>
+    <script>
+        console.log("Hello Wold")
+        //alert("this is an alert")
+        let btn = document.querySelector("button");
+        btn.addEventListener("click", updateName)
+
+        let div = document.querySelector(".name");
+        div.addEventListener("click", changeBGColor);
+
+        function changeBGColor () {changeColor("body", div.textContent);}
+
+        function changeButtonColor(){
+            changeColor("button", "pink")
+        }
+
+        function changeColor(searchElement, newColor){
+            console.log("change color is being run");
+            var obj = document.querySelector(searchElement);
+            obj.style = "background-color:" + newColor;
+        }
+
+        function updateName(){
+            console.log("test");
+            let name = document.querySelector(".name");
+            const input = prompt("Enter a new name!");
+            name.textContent= input;
+        }
+    </script>
+</body>
+</html>
