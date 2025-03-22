@@ -7,10 +7,10 @@ function randomValueFromArray(array){
     return array[random];
 }
 
-var storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day."
-const insertX = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
-const insertY = ["the soup kitchen","Disneyland","the White House"];
-const insertZ = ["spontaneously combusted","melted into a puddle on the sidewalk","turned into a slug and crawled away"];
+var storyText = "Gordon Ramsay needed to :insertx: but he did not have the 10000 pounds of existential dread required to do so. He watched a:inserty: video to give him the existential dread. Gordon Ramsay needed to get the internal temperature of the :insertz: to a nice 160 fahrenheit to get it ready so he could :insertx:."
+const insertX = ["make tea in space", "fight the unbread in overcooked", "dance on the countertop"];
+const insertY = ["n exerbia"," scale of the universe"," My Little Pony"];
+const insertZ = ["tea","chicken","burger"];
 
 randomize.addEventListener('click', result);
 
@@ -27,14 +27,14 @@ function result() {
 
     if(customName.value !== '') {
         const name = customName.value;
-        newStory = newStory.replaceAll("Bob", name)
+        newStory = newStory.replaceAll("Gordon Ramsay", name)
     }
 
     if(document.getElementById("uk").checked) {
-        const weight = Math.round(300/14) + " stone";
-        const temperature =  Math.round((94-32)*(5/9)) + " centigrade";
-        newStory = newStory.replace("94 fahrenheit", temperature)
-                            .replace("300 pounds", weight);
+        const weight = Math.round(10000/14) + " stone";
+        const temperature =  Math.round((160-32)*(5/9)) + " centigrade";
+        newStory = newStory.replace("160 fahrenheit", temperature)
+                            .replace("10000 pounds", weight);
     }
     console.log(newStory);
 
