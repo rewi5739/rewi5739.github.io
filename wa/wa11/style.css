@@ -16,6 +16,11 @@ body {
   height: 480px;
 }
 
+.displayed-img {
+  width: 640px;
+  height: 480px;
+}
+
 .overlay {
   position: absolute;
   top: 0;

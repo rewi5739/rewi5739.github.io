@@ -5,7 +5,7 @@ const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
 /* Declaring the array of image filenames */
-const imgFilepaths = ["images/pic1.jpg", "images/pic2.jpg", "images/pic3.jpg", "images/pic4.jpg", "images/pic5.jpg"];
+const imgFilepaths = ["images/cat1.jpg", "images/cat2.jpg", "images/cat3.webp", "images/cat4.jpg", "images/cat5.webp"];
 
 // const currImg = document.querySelector(".displayed-img");
 // currImg.src = imgFilepaths[0];
