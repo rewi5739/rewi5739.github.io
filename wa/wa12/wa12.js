@@ -1,7 +1,6 @@
 
 
 const newQuoteButton = document.querySelector("#js-new-quote");
-let dontworryaboutit = 1;
 
 let current = {
     name: "",
@@ -29,6 +28,7 @@ function newAddress(id=0){
 newQuoteButton.addEventListener("click", ()=>getQuote());
 
 async function getQuote(id = 0) {
+    // newAddress(186);
     newAddress(id);
     try {
         const response = await fetch(digiAPI);
@@ -99,7 +99,8 @@ function displayInfo() {
 
 function displayEvolutions() {
 
-    const evolutionsFlexbox = document.querySelector("#digimon-prior");
+    const evolutionsFlexbox = document.querySelector("#digimon-after");
+    const devolutionsFlexbox = document.querySelector("#digimon-prior");
 
     let childNodes = evolutionsFlexbox.childNodes;
     let i = childNodes.length;
@@ -109,29 +110,37 @@ function displayEvolutions() {
         i--;
     }
 
+    let childNodes2 = devolutionsFlexbox.childNodes;
+    i = childNodes2.length;
+    while(i > 0) {
+        // console.log(childNodes)
+        childNodes2[i-1].remove();
+        i--;
+    }
+
     let j = 0;
     // console.log(evolutionsFlexbox);
     while (j < current.nextEvolutions.length){
         let newDigimon = document.createElement("img");
         newDigimon.setAttribute("src", current.nextEvolutions[j].image);
         newDigimon.setAttribute("class", "non-main");
-        console.log(current.nextEvolutions[j].id)
-        dontworryaboutit = current.nextEvolutions[j].id;
-        newDigimon.addEventListener("click", ()=>seriouslydontworryaboutit(j))
         evolutionsFlexbox.appendChild(newDigimon);
         j++;
+    }
+
+    let k = 0;
+    while (k < current.priorEvolutions.length){
+        let newDigimon = document.createElement("img");
+        newDigimon.setAttribute("src", current.priorEvolutions[k].image);
+        newDigimon.setAttribute("class", "non-main");
+        devolutionsFlexbox.appendChild(newDigimon);
+        k++;
     }
 }
 
 function displayImage() {
     const digimonImage = document.querySelector("#js-digimon-image");
     digimonImage.setAttribute("src", current.imgSrc)
-}
-
-function seriouslydontworryaboutit(el){
-    console.log(el, current, current.nextEvolutions[el])
-    dontworryaboutit = current.nextEvolutions[el-1].id;
-    getQuote(dontworryaboutit)
 }
 
 getQuote();
