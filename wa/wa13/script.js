@@ -21,18 +21,16 @@ let employees = {
     }
 ]};
 console.log("Problem 1");
-console.log(employees);
+console.log(structuredClone(employees));
 
 const company = {
     "companyName": "Tech Stars",
     "website": "www.techstars.site",
-    "employees": employees
+    "employees": structuredClone(employees)
 };
 console.log("Problem 2");
-console.log(structuredClone(employees));
+console.log(company);
 
-// console.log("AAAAAAAHHHHH", JSON.parse(JSON.stringify(employees)).employees);
-// console.log("AAAAAAAHHHHH", employees.employees);
 employees.employees.push({
     "firstName": "Anna",
     "department": "Tech",
@@ -41,7 +39,7 @@ employees.employees.push({
     "raiseEligible": false
 });
 console.log("Problem 3");
-console.log(employees);
+console.log(structuredClone(employees));
 
 let total = 0;
 for(const employee of employees.employees){
@@ -63,7 +61,7 @@ function giveRaises(employeeDict){
     return employeeDict;
 }
 console.log("Problem 5");
-console.log(giveRaises(employees));
+console.log(structuredClone(giveRaises(employees)));
 
 const wfhName = ["Anna", "Sam"];
 for(const employee of employees.employees){
