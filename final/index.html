@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Final - Soduku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <Header>
+        <H1>Please enter you're phone number</H1>
+        <p>To do so, please enter the digits of your phone number in the highlited boxes from left to right, top to bottom, with the last one in the final box below</p>
+    </Header>
+    <form>
+        <article>
+            <div id="box1" class="box">
+                <input type="text" class="a one entry">
+                <input type="text" class="b one">
+                <input type="text" class="c one">
+                <input type="text" class="a two">
+                <input type="text" class="b two">
+                <input type="text" class="c two">
+                <input type="text" class="a three">
+                <input type="text" class="b three">
+                <input type="text" class="c three">
+            </div>
+            <div id="box2" class="box">
+                <input type="text" class="d one">
+                <input type="text" class="e one">
+                <input type="text" class="f one">
+                <input type="text" class="d two entry">
+                <input type="text" class="e two">
+                <input type="text" class="f two">
+                <input type="text" class="d three">
+                <input type="text" class="e three">
+                <input type="text" class="f three">
+            </div>
+            <div id="box3" class="box">
+                <input type="text" class="g one">
+                <input type="text" class="h one">
+                <input type="text" class="i one">
+                <input type="text" class="g two">
+                <input type="text" class="h two">
+                <input type="text" class="i two">
+                <input type="text" class="g three entry">
+                <input type="text" class="h three">
+                <input type="text" class="i three">
+            </div>
+            <div id="box4" class="box">
+                <input type="text" class="a four">
+                <input type="text" class="b four entry">
+                <input type="text" class="c four">
+                <input type="text" class="a five">
+                <input type="text" class="b five">
+                <input type="text" class="c five">
+                <input type="text" class="a six">
+                <input type="text" class="b six">
+                <input type="text" class="c six">
+            </div>
+            <div id="box5" class="box">
+                <input type="text" class="d four">
+                <input type="text" class="e four">
+                <input type="text" class="f four">
+                <input type="text" class="d five">
+                <input type="text" class="e five entry">
+                <input type="text" class="f five">
+                <input type="text" class="d six">
+                <input type="text" class="e six">
+                <input type="text" class="f six">
+            </div>
+            <div id="box6" class="box">
+                <input type="text" class="g four">
+                <input type="text" class="h four">
+                <input type="text" class="i four">
+                <input type="text" class="g five">
+                <input type="text" class="h five">
+                <input type="text" class="i five">
+                <input type="text" class="g six">
+                <input type="text" class="h six entry">
+                <input type="text" class="i six">
+            </div>
+            <div id="box7" class="box">
+                <input type="text" class="a seven">
+                <input type="text" class="b seven">
+                <input type="text" class="c seven entry">
+                <input type="text" class="a eight">
+                <input type="text" class="b eight">
+                <input type="text" class="c eight">
+                <input type="text" class="a nine">
+                <input type="text" class="b nine">
+                <input type="text" class="c nine">
+            </div>
+            <div id="box8" class="box">
+                <input type="text" class="d seven">
+                <input type="text" class="e seven">
+                <input type="text" class="f seven">
+                <input type="text" class="d eight">
+                <input type="text" class="e eight">
+                <input type="text" class="f eight entry">
+                <input type="text" class="d nine">
+                <input type="text" class="e nine">
+                <input type="text" class="f nine">
+            </div>
+            <div id="box9" class="box">
+                <input type="text" class="g seven">
+                <input type="text" class="h seven">
+                <input type="text" class="i seven">
+                <input type="text" class="g eight">
+                <input type="text" class="h eight">
+                <input type="text" class="i eight">
+                <input type="text" class="g nine">
+                <input type="text" class="h nine">
+                <input type="text" class="i nine entry">
+            </div>
+        </article>
+        <footer>
+            <input type="button" onclick="checkSudoku()" value="submit">
+        </footer>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
