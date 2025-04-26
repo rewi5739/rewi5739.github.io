@@ -1,11 +1,13 @@
-article, .box{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-}
-
 body{
     justify-content: center;
+    align-items: center;
+    background-color: rgb(160, 173, 177);
+}
+
+header{
+    width: 600px;
+    margin:auto;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 article{
@@ -16,10 +18,35 @@ article{
     column-gap: 15px;
 }
 
+article, .box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+form {
+    width: 500px;
+    margin: auto;
+}
+
+.a, .b, .c, .d, .e, .f, .g, .h, .i {
+    background-color: rgb(223, 240, 227);
+}
+
+footer {
+    width: 500px;
+    margin: 0vw 200px;
+}
+
+.postsudoku {
+    width: 100px;
+    margin: auto;
+}
+
 input {
     width: 80%;
 }
 
 .entry {
-    background-color: greenyellow;
+    background-color: rgb(93, 235, 58);
 }
