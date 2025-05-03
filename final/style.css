@@ -2,12 +2,12 @@ body{
     justify-content: center;
     align-items: center;
     background-color: rgb(160, 173, 177);
+    font-family: 'Courier New', Courier, monospace;
 }
 
 header{
     width: 600px;
     margin:auto;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 article{
@@ -49,4 +49,12 @@ input {
 
 .entry {
     background-color: rgb(93, 235, 58);
+}
+
+.red {
+    background-color: rgb(216, 156, 156);
+}
+
+.good {
+    background-color: None;
 }

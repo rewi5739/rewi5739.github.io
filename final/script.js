@@ -1,5 +1,6 @@
 
 let oldprobchild;
+let alertBox = document.querySelector("#Alert");
     
 function checkSudoku() {
     const article = document.querySelector("article");
@@ -47,7 +48,8 @@ function checkSudoku() {
         console.log("Valid Sudoku");
         submitNumber();
     } else {
-        alert("Invalid Sudoku. Reason: " + sudokuError)
+        alertBox.textContent = "Invalid Sudoku. Reason: " + sudokuError;
+        alertBox.classList = "red";
     }
 }
 
@@ -60,7 +62,7 @@ function check9(elementList){
         if (child.value !== undefined){
             const childValue = parseInt(child.value);
             // console.log(childValue + "childValue");
-            if((childValue > 0 && childValue < 10)||(child.className.includes("entry")&&childValue==0)){
+            if(childValue >= 0 && childValue < 10){
                 // console.log(values.includes(childValue) + "values in list");
                 if(!values.includes(childValue)){
                     // console.log(childValue);
@@ -95,8 +97,16 @@ function submitNumber() {
     const entryBoxes = document.querySelectorAll(".entry");
     console.log(entryBoxes)
     for(entry of entryBoxes){
-        phoneNumberStr += entry.value;
+        if(parseInt(entry.value) >= 0 && parseInt(entry.value) < 10){
+            phoneNumberStr += entry.value;
+        } else {
+            alertBox.textContent = "Last box value is invalid.";
+            alertBox.classList = "red";
+            return;
+        }
     }
     let phoneNumber = "(" + phoneNumberStr.slice(0,3) + ")" + phoneNumberStr.slice(3, 6) + "-" + phoneNumberStr.slice(6);
     console.log(phoneNumber);
+    alertBox.textContent = "Thank you for submitting your phone number: " + phoneNumber;
+    alertBox.classList = "good"
 }

@@ -11,8 +11,8 @@
         <H1 style="text-align: center;">Phone Number Sudoku</H1>
         <p>Please enter the digits of your phone number in the highlited boxes from left to right, top to bottom, with the last one in the final box below. <br>
             Then, make a valid sudoku using the rest of the boxes.<br>
-            If there is an error in the sudoku, the computer will highlight the first error found. <br>
-            Zeros are wild, but may only be entered in the entry boxes.
+            <b>You may use 0-9</b>, making this easier than a classic sudoku. <br>
+            If there is an error in the sudoku, the submit button will highlight the first error found. <br>
         </p>
     </Header>
     <form>
@@ -123,7 +123,12 @@
             <br>
             <br>
             <input type="button" onclick="checkSudoku()" value="submit" class="postsudoku">
+
+            
         </footer>
+        <p id="Alert">
+
+        </p>
     </form>
     <script src="script.js"></script>
 </body>
